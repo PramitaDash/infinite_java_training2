@@ -1,0 +1,13 @@
+package com.java.string;
+
+public class CharToStringExample {
+	
+	public static void main(String[] args) {
+        char charValue = 'A';
+        String stringValue = Character.toString(charValue);
+
+        System.out.println("Character Value: " + charValue);
+        System.out.println("String Value: " + stringValue);
+    }
+
+}

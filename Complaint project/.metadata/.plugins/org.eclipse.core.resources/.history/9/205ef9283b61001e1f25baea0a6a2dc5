@@ -1,0 +1,67 @@
+<%@page import="com.java.com.Complaint"%>
+<%@page import="com.java.com.ComplaintDAOImpl"%>
+<%@page import="com.java.com.ComplaintDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="AddComplaint.jsp">
+<center>
+	<h1>Add Complaint</h1>
+	<table>
+	
+	<tr>
+	<th>Complaint Type :</th>
+	<td>
+	<input type="text" name="complaintType"/><br/><br/>
+	</td>
+	</tr>
+	
+	<tr>
+	<th>Complaint Description :</th>
+	<td>
+	<input type="text" name="cdescription"/><br/><br/>
+	</td>
+	</tr>
+	
+	<tr>
+	<th>Complaint Date : </th>
+	<td>
+	<input type="Date" name="complaintdate"/><br/><br/>
+	</td>
+	</tr>
+	
+	<tr>
+	<th>Severity :</th>
+	<td>
+	 <select name="severity">
+	 	<option value="low">Low</option>
+	 	<option value="Medium">Medium</option>
+	 	<option value="High">High</option>
+	  </select>
+	 </tr>
+	 
+	 <tr>
+	<th>Status : </th>
+	<td>
+	<input type="text" name="status"/><br/><br/>
+	</td>
+	</tr>
+	
+	<tr>
+	<td colspan="2">
+	<input type="submit" value="Add Complaint"/>
+	</td>
+	</table>
+</center>
+</form>
+<%
+	
+%>
+</body>
+</html>

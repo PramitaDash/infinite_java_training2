@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" action="AddCustomerServlet">
+		<center>
+			<h1>Add Customer</h1>
+			<table>
+				<tr>
+					<th>Firstname:</th>
+			<td>
+			<input type="text" name="fisrtname"/><br/><br/>
+			</td>
+				</tr>
+				<tr>
+				<th>Lastname:</th>
+			<td>
+			<input type="text" name="lastname"/><br/><br/>
+			</td>
+			</tr>
+			<tr>
+				<th>User Name:</th>
+			<td>
+			<input type="text" name="userName"/><br/><br/>
+			</td>
+			</tr>
+			<tr>
+				<th>Password:</th>
+			<td>
+			<input type="password" name="passWord"/><br/><br/>
+			</td>
+			</tr>
+			<tr>
+				<th>ReType Password :</th>
+			<td>
+			<input type="password" name="retypePassword"/><br/><br/>
+			</td>
+			</tr>
+			<tr>
+				<th>Email:</th>
+			<td>
+			<input type="email" name="email"/><br/><br/>
+			</td>
+			</tr>
+			<tr>
+				<th>PhoneNo:</th>
+			<td>
+			<input type="text" name="PhoneNo"/><br/><br/>
+			</td>
+			</tr>
+			<TR>
+                    <TH colspan="2">
+                        <input type="submit" name="submit">
+                    </TH>
+                </TR>
+			
+			</table>
+		</center>
+	</form>
+	
+</body>
+</html>

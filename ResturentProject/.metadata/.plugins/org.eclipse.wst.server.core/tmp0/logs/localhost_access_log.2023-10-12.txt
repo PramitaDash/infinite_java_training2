@@ -1,0 +1,7 @@
+127.0.0.1 - - [12/Oct/2023:14:17:25 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Oct/2023:14:17:28 +0530] "GET /Restaurant/Walletinfo.jsf HTTP/1.1" 200 3238
+127.0.0.1 - - [12/Oct/2023:14:18:25 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Oct/2023:14:18:28 +0530] "GET /Restaurant/Walletinfo.jsf HTTP/1.1" 200 3805
+0:0:0:0:0:0:0:1 - - [12/Oct/2023:14:24:41 +0530] "GET /Restaurant/DashBord.jsf HTTP/1.1" 200 2847
+0:0:0:0:0:0:0:1 - - [12/Oct/2023:14:24:45 +0530] "POST /Restaurant/DashBord.jsf HTTP/1.1" 200 3805
+0:0:0:0:0:0:0:1 - - [12/Oct/2023:14:24:45 +0530] "POST /Restaurant/DashBord.jsf HTTP/1.1" 200 3805

@@ -1,0 +1,13 @@
+package com.java.string;
+
+public class DoubleToStringExample {
+	
+	 public static void main(String[] args) {
+	        double doubleValue = 123.45;
+	        String stringValue = Double.toString(doubleValue);
+
+	        System.out.println("Double Value: " + doubleValue);
+	        System.out.println("String Value: " + stringValue);
+	    }
+
+}

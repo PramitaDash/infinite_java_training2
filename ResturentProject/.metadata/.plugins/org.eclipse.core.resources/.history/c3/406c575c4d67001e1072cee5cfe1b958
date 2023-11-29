@@ -1,0 +1,46 @@
+package com.java.res;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class CustomerController {
+	
+	private Customer customer;
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	
+	public boolean validatePhoneNo(String CUS_PHN_NO) {
+		Pattern pattern = Pattern.compile("^\\[+][9][1]-[0-9]{10}");
+		Matcher matcher = pattern.matcher(CUS_PHN_NO);
+		return matcher.matches();
+		
+	}
+	
+	public boolean validateUsername(String CUS_USERNAME) {
+	Pattern pattern = Pattern.compile("^[a-zA-Z]");
+	Matcher matcher = pattern.matcher(CUS_USERNAME);
+	return matcher.matches();
+	}
+	
+	public boolean validatePassword(String CUS_PASSWORD) {
+		Pattern pattern = Pattern.compile("^(?=.*[0-9])"
+				+ "(?=.*[a-z])(?=.*[A-Z])"
+				+"(?=.*[@#$%^&*+=])"
+				+"(?=\\S+&)");;
+		Matcher matcher = pattern.matcher(CUS_PASSWORD);
+		return matcher.matches();
+	}
+	
+	public boolean validateEmail(String CUS_EMAIL) {
+		Pattern pattern = Pattern.compile("^[A-Za-z0-9+_.-}+@(.+)$");
+		Matcher matcher = pattern.matcher(CUS_EMAIL);
+		return matcher.matches();
+	}
+
+}

@@ -1,0 +1,33 @@
+package com.java.string;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class DuplicateCharacterFinder {
+	
+	public static void main(String[] args) {
+//this define a string variable `text` with the value "Java Guides Net."
+        String text = "Java Guides Net";
+//This line prints a message to the console to indicate that the program will display duplicate characters in the string.
+        System.out.println("Duplicate characters in the string are:");
+// call the `findDuplicates` method and pass the `text` string as an argument. This method will find and print the duplicate characters in the string.
+        findDuplicates(text);
+    }
+
+    public static void findDuplicates(String str) {
+//This is the `findDuplicates` method, which takes a string as its parameter.
+        Map<Character, Integer> charCountMap = new HashMap<>();
+//create a `Map` named `charCountMap` to store character counts. The key is a character, and the value is an integer representing the count.
+
+        for (char c : str.toCharArray()) {
+            charCountMap.put(c, charCountMap.getOrDefault(c, 0) + 1);
+        }
+
+        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.print(entry.getKey() + " ");
+            }
+        }
+    }
+
+}

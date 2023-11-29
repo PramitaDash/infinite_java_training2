@@ -1,0 +1,13 @@
+package com.java.string;
+
+public class LongToStringExample {
+	public static void main(String[] args) {
+        // Convert Long to String using toString()
+        Long longValue = 123456789L;
+        String stringValue = Long.toString(longValue);
+
+        System.out.println("Long Value: " + longValue);
+        System.out.println("String Value: " + stringValue);
+    }
+
+}

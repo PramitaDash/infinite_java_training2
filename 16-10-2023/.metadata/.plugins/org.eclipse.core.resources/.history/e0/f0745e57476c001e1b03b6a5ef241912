@@ -1,0 +1,13 @@
+package com.java.string;
+
+public class ByteToStringExample {
+	
+	public static void main(String[] args) {
+        byte byteValue = 42;
+        String stringValue = String.valueOf(byteValue);
+
+        System.out.println("Byte Value: " + byteValue);
+        System.out.println("String Value: " + stringValue);
+    }
+
+}

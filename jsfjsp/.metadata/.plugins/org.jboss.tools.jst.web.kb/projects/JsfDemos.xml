@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-coyote.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/ecj-4.6.3.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-util.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina-ant.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/jasper-el.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-jdbc.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-util-scan.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-i18n-fr.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/jaspic-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-dbcp.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/annotations-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/servlet-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/jasper.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-i18n-ru.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina-storeconfig.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-i18n-ja.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-i18n-es.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina-tribes.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/el-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/websocket-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/jsp-api.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-jni.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/tomcat-websocket.jar"/>
+  <path value="D:/apache-tomcat-8.5.42/lib/catalina-ha.jar"/>
+  <path value="/JsfDemos/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="JsfDemos"/>
+    </library>
+   </libraries>
+  </path>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification">
+   <linked-resource declaration="true"
+    name="%1;%2;%3;%4;%5;%6;%7;%8;%9;%10;" path="%0"/>
+  </core>
+  <el>
+   <linked-el length="24" name="%11" offset="399" path="%12"/>
+   <linked-el length="25" name="%11" offset="624" path="%13"/>
+   <linked-el length="24" name="%11" offset="524" path="%13"/>
+   <linked-el length="38" name="%11" offset="777" path="%13"/>
+   <linked-el length="23" name="%11" offset="709" path="%13"/>
+   <linked-el length="56" name="%14" offset="601" path="%15"/>
+   <linked-el length="20" name="%16" offset="738" path="%17"/>
+   <linked-el length="20" name="%18" offset="656" path="%17"/>
+   <linked-el length="19" name="%19" offset="548" path="%15"/>
+   <linked-el length="19" name="%19" offset="446" path="%15"/>
+   <linked-el length="56" name="%19" offset="601" path="%15"/>
+   <linked-el length="12" name="%20" offset="1533" path="%21"/>
+   <linked-el length="11" name="%20" offset="1279" path="%21"/>
+   <linked-el length="11" name="%20" offset="1026" path="%21"/>
+   <linked-el length="12" name="%20" offset="771" path="%21"/>
+   <linked-el length="12" name="%20" offset="1782" path="%21"/>
+   <linked-el length="19" name="%22" offset="548" path="%15"/>
+   <linked-el length="19" name="%22" offset="446" path="%15"/>
+   <linked-el length="56" name="%22" offset="601" path="%15"/>
+   <linked-el length="19" name="%23" offset="818" path="%17"/>
+   <linked-el length="28" name="%24" offset="509" path="%21"/>
+   <linked-el length="26" name="%25" offset="893" path="%17"/>
+   <linked-el length="26" name="%26" offset="893" path="%17"/>
+   <linked-el length="20" name="%26" offset="738" path="%17"/>
+   <linked-el length="19" name="%26" offset="818" path="%17"/>
+   <linked-el length="20" name="%26" offset="656" path="%17"/>
+   <linked-el length="56" name="%27" offset="601" path="%15"/>
+   <linked-el length="24" name="%28" offset="399" path="%12"/>
+   <linked-el length="25" name="%28" offset="624" path="%13"/>
+   <linked-el length="24" name="%28" offset="524" path="%13"/>
+   <linked-el length="38" name="%28" offset="777" path="%13"/>
+   <linked-el length="23" name="%28" offset="709" path="%13"/>
+   <linked-el length="28" name="%29" offset="509" path="%21"/>
+   <linked-el length="12" name="%29" offset="1533" path="%21"/>
+   <linked-el length="11" name="%29" offset="1279" path="%21"/>
+   <linked-el length="11" name="%29" offset="1026" path="%21"/>
+   <linked-el length="12" name="%29" offset="771" path="%21"/>
+   <linked-el length="12" name="%29" offset="1782" path="%21"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="calculation" value="%11"/>
+  <alias path="/JsfDemos/src/main/webapp/EmployTable.jsp" value="%21"/>
+  <alias path="com.java.jsf.Calculation" value="%2"/>
+  <alias path="/JsfDemos/src/main/webapp/welcomeJSF.jsp" value="%17"/>
+  <alias path="/JsfDemos/src/main/java/com/java/jsf/LoginDao.java" value="%14"/>
+  <alias path="Calculator.num2" value="%16"/>
+  <alias path="Calculator.num1" value="%18"/>
+  <alias path="\JsfDemos\src\main\java\com\java\jsf\Login.java" value="%7"/>
+  <alias path="\JsfDemos\src\main\java\com\java\jsf\LoginDao.java" value="%9"/>
+  <alias path="login" value="%19"/>
+  <alias path="/JsfDemos/src/main/webapp/Login.jsp" value="%15"/>
+  <alias path="com.java.jsf.Employ" value="%1"/>
+  <alias path="/JsfDemos/src/main/webapp/index.jsp" value="%12"/>
+  <alias path="Calculator.sum" value="%23"/>
+  <alias path="/JsfDemos/src/main/webapp/WEB-INF/faces-config.xml" value="%0"/>
+  <alias path="\JsfDemos\src\main\java\com\java\jsf\Calculation.java" value="%3"/>
+  <alias path="com.java.jsf.LoginDao" value="%5"/>
+  <alias path="/JsfDemos/src/main/java/com/java/jsf/EmployDAOImpl.java" value="%24"/>
+  <alias path="Calculator.addNumber" value="%25"/>
+  <alias path="Calculator" value="%26"/>
+  <alias path="com.java.jsf.EmployDAOImpl" value="%8"/>
+  <alias path="/JsfDemos/src/main/java/com/java/jsf/Calculation.java" value="%28"/>
+  <alias path="employDao" value="%29"/>
+  <alias path="\JsfDemos\src\main\java\com\java\jsf\Employ.java" value="%6"/>
+  <alias path="/JsfDemos/src/main/java/com/java/jsf/Employ.java" value="%20"/>
+  <alias path="/JsfDemos/src/main/java/com/java/jsf/Login.java" value="%22"/>
+  <alias path="\JsfDemos\src\main\java\com\java\jsf\EmployDAOImpl.java" value="%10"/>
+  <alias path="com.java.jsf.Login" value="%4"/>
+  <alias path="/JsfDemos/src/main/webapp/Calc.jsp" value="%13"/>
+  <alias path="loginDao" value="%27"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

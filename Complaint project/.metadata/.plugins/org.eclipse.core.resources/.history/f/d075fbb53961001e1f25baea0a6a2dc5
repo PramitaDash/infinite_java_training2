@@ -1,0 +1,33 @@
+<%@page import="com.java.com.Complaint"%>
+<%@page import="com.java.com.ComplaintDAOImpl"%>
+<%@page import="com.java.com.ComplaintDAO"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="AddComplaint.jsp">
+<center>
+	Complaint ID : <input type="text" name="complaintid"/><br/><br/>
+	Complaint Type :<input type="text" name="complaintType"/><br/><br/>
+	Complaint Description :<input type="text" name="cdescription"/><br/><br/>
+	Complaint Date : <input type="Date" name="complaintdate"/><br/><br/>
+	Severity : <input type="text" name="severity"/><br/><br/>
+	Status : <input type="text" name="status"/><br/><br/>
+	<input type="submit" value="Add Complaint"/>
+</center>
+</form>
+<%
+	String parameterValue = request.getParameter("complaintid");
+	if(parameterValue != null){
+		ComplaintDAO dao = new ComplaintDAOImpl();
+		Complaint complaint = new Complaint();
+		complaint.
+	}
+%>
+</body>
+</html>

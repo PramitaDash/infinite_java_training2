@@ -1,0 +1,52 @@
+package com.java.ejb;
+
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class EmployBean
+ */
+@Stateless
+@LocalBean
+public class EmployBean implements EmployBeanRemote {
+
+    /**
+     * Default constructor. 
+     */
+    public EmployBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public String addEmploy(Employ Employ) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employ> showEmploy() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employ searchEmploy(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteEmploy(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String updateEmploy(Employ EmployNew) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

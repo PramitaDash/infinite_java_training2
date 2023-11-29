@@ -1,0 +1,117 @@
+package com.java.res;
+
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+
+public class CustomerDAOImpl {
+	
+	SessionFactory sf;
+	Session session;
+	
+	
+	public boolean validatePhoneNo(String CUS_PHN_NO) {
+		Pattern pattern = Pattern.compile("^\\[+][9][1]-[0-9]{10}");
+		Matcher matcher = pattern.matcher(CUS_PHN_NO);
+		return matcher.matches();
+		
+	}
+	
+	public boolean validateUsername(String CUS_USERNAME) {
+	Pattern pattern = Pattern.compile("^[a-zA-Z]");
+	Matcher matcher = pattern.matcher(CUS_USERNAME);
+	return matcher.matches();
+	}
+	
+	public boolean validatePassword(String CUS_PASSWORD) {
+		Pattern pattern = Pattern.compile("^(?=.*[0-9])"
+				+ "(?=.*[a-z])(?=.*[A-Z])"
+				+"(?=.*[@#$%^&*+=])"
+				+"(?=\\S+&)");
+		Matcher matcher = pattern.matcher(CUS_PASSWORD);
+		return matcher.matches();
+	}
+	
+	public boolean validateEmail(String CUS_EMAIL) {
+		Pattern pattern = Pattern.compile("^[A-Za-z]+@[A-Za-z]\\.com$");
+		Matcher matcher = pattern.matcher(CUS_EMAIL);
+		return matcher.matches();
+	}
+	
+	public boolean validateName(String CUS_NAME) {
+		Pattern pattern = Pattern.compile("[a-zA-Z]+");
+		Matcher matcher = pattern.matcher(CUS_NAME);
+		return matcher.matches();
+	}
+
+	
+	
+	public String addCustomerDao(Customer customer) {
+		if (validateUsername(customer.getCUS_NAME()) && validateEmail(customer.getCUS_EMAIL())
+			&& validatePhoneNo(customer.getCUS_PHN_NO()) && validateName(customer.getCUS_NAME())) {
+		String encr = EncryptPassword.getCode(customer.getCUS_PASSWORD());
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		session.save(customer);
+		trans.commit();
+		
+		return "Login.jsp.xhtml?faces-redirect=true";
+	}else {
+			FacesContext context = FacesContext.getCurrentInstance();
+	        if (!validateUsername(customer.getCUS_USERNAME())) {
+	            context.addMessage("form:cus_username", new FacesMessage("Invalid username."));
+	        }
+	        if (!validatePassword(customer.getCUS_PASSWORD())) {
+	        	context.addMessage("form:cus_username", new FacesMessage("Invalid Password."));
+	        }
+	        if (!validateEmail(customer.getCUS_EMAIL())) {
+	            context.addMessage("form:cus_email", new FacesMessage("Invalid email address."));
+	        }
+	        if (!validatePhoneNo(customer.getCUS_PHN_NO())) {
+	            context.addMessage("form:cus_phn_no", new FacesMessage("Invalid phone number."));
+	        }
+	        if (!validateName(customer.getCUS_NAME())) {
+	            context.addMessage("form:cus_name", new FacesMessage("Invalid name."));
+	        }
+
+	        return null;
+
+	    }
+	}
+
+	
+	public String validateMe(Customer customer) {
+		String encr = EncryptPassword.getCode(customer.getCUS_PASSWORD());
+		Map<String,Object> sessionMap = 
+	FacesContext.getCurrentInstance().getExternalContext().getSessionMap();		
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		Criteria cr = session.createCriteria(Customer.class);
+		cr.add(Restrictions.eq("CUS_USERNAME", customer.getCUS_USERNAME()));
+		cr.add(Restrictions.eq("CUS_PASSWORD",encr.trim()));
+		cr.setProjection(Projections.rowCount());
+		
+		long  count =(Long)cr.uniqueResult();
+//		System.out.println(count);
+		if (count==1) {
+			
+			return "RestaurantShow.jsp?faces-redirect=true";			
+		} else {
+			sessionMap.put("errorMessage", "Invalid Credentials...");
+			return "Login.jsp?faces-redirect=true";
+		}
+	}
+
+	
+}

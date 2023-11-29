@@ -1,0 +1,149 @@
+<%@ page import="com.java.com.Complaint" %>
+<%@ page import="com.java.com.ComplaintDAOImpl" %>
+<%@ page import="com.java.com.ComplaintDAO" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Complaint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .success-message {
+            color: green;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Add Complaint</h1>
+<%
+    String complaintType = request.getParameter("complaintType");
+    String cdescription = request.getParameter("cdescription");
+    String complaintdate = request.getParameter("complaintdate");
+    String severity = request.getParameter("severity");
+    String status = request.getParameter("status");
+
+    if (complaintType != null && cdescription != null && complaintdate != null && severity != null && status != null) {
+        Complaint complaint = new Complaint();
+        complaint.setComplaintType(complaintType);
+        complaint.setCDescription(cdescription);
+        complaint.setComplaintDate(complaintdate);
+        complaint.setSeverity(severity);
+        complaint.setStatus(status);
+
+        ComplaintDAO dao = new ComplaintDAOImpl();
+        int rowsAffected = dao.addComplaintDao(complaint);
+
+        if (rowsAffected > 0) {
+%>
+            <p class="success-message">Complaint added successfully!</p>
+<%
+        } else {
+%>
+            <p class="error-message">Error adding complaint.</p>
+<%
+        }
+    }
+%>
+<form method="post" action="AddComplaint.jsp">
+    <table>
+        <tr>
+            <th>Complaint Type:</th>
+            <td>
+                <input type="text" name="complaintType" required /><br/>
+            </td>
+        </tr>
+        <tr>
+            <th>Complaint Description:</th>
+            <td>
+                <input type="text" name="cdescription" required /><br/>
+            </td>
+        </tr>
+        <tr>
+            <th>Complaint Date:</th>
+            <td>
+                <input type="date" name="complaintdate" required /><br/>
+            </td>
+        </tr>
+        <tr>
+            <th>Severity:</th>
+            <td>
+                <select name="severity" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select><br/>
+            </td>
+        </tr>
+        <tr>
+            <th>Status:</th>
+            <td>
+                <input type="text" name="status" required /><br/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Add Complaint" />
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

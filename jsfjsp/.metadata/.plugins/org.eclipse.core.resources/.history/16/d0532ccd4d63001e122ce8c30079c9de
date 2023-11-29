@@ -1,0 +1,23 @@
+package com.java.jsfjsp;
+
+
+	public class LoginDAO {
+
+		public String validateMe(String userName, String pwd) {
+			if (userName.equals("Infinite") && pwd.equals("Infinite")) {
+				return "Menu.jsp?faces-redirect=true";
+			} else {
+				return "Login.jsp?faces-redirect=true";
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+

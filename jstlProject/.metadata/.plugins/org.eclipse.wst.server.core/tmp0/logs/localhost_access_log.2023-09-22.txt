@@ -1,0 +1,9 @@
+127.0.0.1 - - [22/Sep/2023:12:04:32 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:12:04:33 +0530] "GET /JstlProject/SetEx.jsp HTTP/1.1" 500 3106
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:12:06:08 +0530] "GET /JstlProject/SetEx.jsp HTTP/1.1" 200 181
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:12:24:37 +0530] "GET /JstlProject/LoopEx.jsp HTTP/1.1" 200 573
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:12:29:59 +0530] "GET /JstlProject/NumberEx.jsp HTTP/1.1" 200 315
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:12:32:13 +0530] "GET /JstlProject/NumberEx.jsp HTTP/1.1" 200 315
+127.0.0.1 - - [22/Sep/2023:14:41:43 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:14:41:45 +0530] "GET /JstlProject/ShowEmploy.jsp HTTP/1.1" 200 1280
+0:0:0:0:0:0:0:1 - - [22/Sep/2023:15:57:10 +0530] "GET /JstlProject/ShowEmploy.jsp HTTP/1.1" 200 1280

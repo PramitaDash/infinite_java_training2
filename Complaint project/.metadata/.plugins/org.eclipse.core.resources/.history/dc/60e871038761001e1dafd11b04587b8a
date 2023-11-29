@@ -1,0 +1,90 @@
+<%@ page import="com.java.com.Complaint" %>
+<%@ page import="com.java.com.ComplaintDAOImpl" %>
+<%@ page import="com.java.com.ComplaintDAO" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Complaint</title>
+    <!-- Add your CSS styles here -->
+</head>
+<body>
+    <h1>Add Complaint</h1>
+
+    <form method="post" action="AddComplaint.jsp">
+        <table>
+            <tr>
+                <th>Complaint Type:</th>
+                <td>
+                    <input type="text" name="complaintType" required /><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Complaint Description:</th>
+                <td>
+                    <input type="text" name="complaintDescription" required /><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Complaint Date:</th>
+                <td>
+                    <input type="date" name="complaintDate" required /><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Severity:</th>
+                <td>
+                    <input type="text" name="severity" required /><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Status:</th>
+                <td>
+                    <input type="text" name="status" required /><br/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Add Complaint" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <%
+    if (request.getMethod().equalsIgnoreCase("POST")) {
+        String complaintType = request.getParameter("complaintType");
+        String complaintDescription = request.getParameter("complaintDescription");
+        String complaintDate = request.getParameter("complaintDate");
+        String severity = request.getParameter("severity");
+        String status = request.getParameter("status");
+
+        ComplaintDAO dao = new ComplaintDAOImpl();
+        Complaint complaint = new Complaint();
+        complaint.setComplaintType(complaintType);
+        complaint.setCDescription(complaintDescription);
+        // Parse the date string to a Date object, handle exceptions as needed
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date date = sdf.parse(complaintDate);
+            complaint.setComplaintDate(date);
+        } catch (ParseException e) {
+            // Handle the parsing exception, e.g., display an error message
+            e.printStackTrace();
+        }
+        complaint.setSeverity(severity);
+        complaint.setStatus(status);
+
+        // Insert the complaint into the database using your DAO
+        dao.addComplaint(complaint);
+    }
+    %>
+
+    <table align="center">
+        <tr>
+            <th><a href="ShowComplaint.jsp">Show All Complaints</a></th>
+        </tr>
+    </table>
+</body>
+</html>

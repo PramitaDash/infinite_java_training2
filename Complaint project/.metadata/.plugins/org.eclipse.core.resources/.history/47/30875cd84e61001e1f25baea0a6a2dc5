@@ -1,0 +1,91 @@
+package com.java.com;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ComplaintDAOImpl implements ComplaintDAO {
+	
+	Connection connection;
+	PreparedStatement pst;
+	
+	public String generateComplaintID() throws ClassNotFoundException, SQLException {
+ 		connection = ConnectionHelper.getConnection();
+ 		String cmd = "select max(ComplaintID) sid from Complaint";
+    	pst = connection.prepareStatement(cmd);
+		ResultSet rs = pst.executeQuery();
+    		rs.next();
+    	String sid = rs.getString("sid");
+    	int id = Integer.parseInt(sid.substring(1));
+    	id++;
+    	sid = String.format("C%03d", id);
+		return sid;
+		}
+
+	@Override
+	public List<Complaint> showComplaintDao() throws ClassNotFoundException, SQLException {
+		connection = ConnectionHelper.getConnection();
+		String cmd = "select * from Complaint";
+		pst = connection.prepareStatement(cmd);
+		ResultSet rs = pst.executeQuery();
+		List<Complaint> complaintList = new ArrayList<Complaint>();
+		Complaint complaint = null;
+		while(rs.next()) {
+			complaint =new Complaint();
+			complaint.setComplaintID(rs.getString("ComplaintID"));
+			complaint.setComplaintType(rs.getString("ComplaintType"));
+			complaint.setCDescription(rs.getString("CDecription"));
+			complaint.setComplaintDate(rs.getDate("ComplaintDate"));
+			complaint.setSeverity(rs.getString("Serverity"));
+			complaint.setStatus(rs.getString("Status"));
+		}
+		return complaintList;
+	}
+
+	@Override
+	public Complaint searchComplaintDao(int ComplaintID) throws ClassNotFoundException, SQLException {
+		connection = ConnectionHelper.getConnection();
+		String cmd = "select * from Complaint where ComplaintID=?";
+		pst = connection.prepareStatement(cmd);
+		pst.setInt(1, ComplaintID);
+		ResultSet rs = pst.executeQuery();
+		Complaint complaint = null;
+		if(rs.next()) {
+			complaint = new Complaint();
+			complaint.setComplaintID(rs.getString("ComplaintID"));
+			complaint.setComplaintType(rs.getString("ComplaintType"));
+			complaint.setCDescription(rs.getString("CDescription"));
+			complaint.setComplaintDate(rs.getDate("complaintDate"));	
+			complaint.setSeverity(rs.getString("Severity"));
+			complaint.setStatus(rs.getString("Status"));
+		}
+		return complaint;
+	}
+
+	@Override
+	public String addComplaintDao(Complaint complaint) throws ClassNotFoundException, SQLException {
+		String id = generateComplaintID();
+		complaint.setComplaintID(id);
+		connection = ConnectionHelper.getConnection();
+		SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd"); 
+		java.util.Date date=new java.util.Date();
+		String cmd = "Insert into Complaint(ComplaintID,ComplaintType,CDecription,ComplaintDate,Serverity,Status)"
+				+"value(?,?,?,?,?,?)";
+		PreparedStatement pst = connection.prepareStatement(cmd);
+		pst.setString(1,  complaint.getComplaintID());
+		pst.setString(2, complaint.getComplaintType());
+		pst.setString(3, complaint.getCDescription());
+		pst.setDate(4, complaint.getComplaintDate());
+		pst.setString(5, complaint.getSeverity());
+		pst.setString(6, complaint.getStatus());
+		pst.executeUpdate();
+		return "Complaint recorded...";
+		
+	}
+
+}

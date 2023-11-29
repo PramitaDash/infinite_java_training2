@@ -1,0 +1,14 @@
+package com.java.string;
+
+public class IntegerToStringExample {
+	
+	public static void main(String[] args) {
+        // Convert Integer to String using toString()
+        Integer intValue = 12345;
+        String stringValue = Integer.toString(intValue);
+
+        System.out.println("Integer Value: " + intValue);
+        System.out.println("String Value: " + stringValue);
+    }
+
+}

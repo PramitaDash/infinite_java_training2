@@ -1,0 +1,25 @@
+
+<%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<f:view>
+<body>
+<h:form>
+		Pleace Enter Number: <br/>
+		First Number
+		<h:inputText id="num1" value="#{calculation.firdtNo}"/><br/>
+		Second Number
+		<h:inputText id="num2" value="#{calculation.seconfNo}"/><br/>
+		Result is :
+		<h:outputText value= "#{calculation.result}"/>
+		<h:commandButton actionListener="#{calculation.addition }"
+			value="Sum"/>
+		</h:form>
+
+</body>
+</f:view>
+</html>

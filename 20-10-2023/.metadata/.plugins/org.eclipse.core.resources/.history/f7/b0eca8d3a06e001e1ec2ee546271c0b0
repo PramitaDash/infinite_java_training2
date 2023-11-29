@@ -1,0 +1,5 @@
+package com.java.ques;
+
+public class TestMultitasking1 extends Thread {
+
+}

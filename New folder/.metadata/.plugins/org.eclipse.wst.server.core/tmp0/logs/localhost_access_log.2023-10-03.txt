@@ -1,0 +1,12 @@
+127.0.0.1 - - [03/Oct/2023:00:55:26 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:55:28 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 897
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:55:28 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:55:45 +0530] "GET /Complaint/AddComplaint.jsp?ctype=dsfs&cdesc=rtwtr&sev=ewte HTTP/1.1" 200 897
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:00:55:49 +0530] "GET /Complaint/ShowComplaint.jsp HTTP/1.1" 500 3016
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:01:01:11 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 2188
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:01:02:14 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 2221
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:01:04:42 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 2210
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:01:05:38 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 2183
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:01:06:09 +0530] "GET /Complaint/AddComplaint.jsp HTTP/1.1" 200 2171
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:01:09:09 +0530] "GET /Complaint/ShowComplaint.jsp HTTP/1.1" 500 3038
+0:0:0:0:0:0:0:1 - - [03/Oct/2023:01:13:57 +0530] "GET /Complaint/ShowComplaint.jsp HTTP/1.1" 500 2987

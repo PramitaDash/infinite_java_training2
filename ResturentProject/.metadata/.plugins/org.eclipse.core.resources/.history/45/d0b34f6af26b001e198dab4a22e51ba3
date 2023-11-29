@@ -1,0 +1,6 @@
+package com.java.res;
+
+public enum WAL_SOURCE {
+
+	PAYTM, CREDIT_CARD, DEBIT_CARD
+}

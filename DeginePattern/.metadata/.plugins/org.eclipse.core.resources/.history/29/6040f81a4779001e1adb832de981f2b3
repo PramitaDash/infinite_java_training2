@@ -1,0 +1,12 @@
+package com.java.pat;
+
+public class TrainingFactory extends AbstractFactory {
+
+	@Override
+	String getDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

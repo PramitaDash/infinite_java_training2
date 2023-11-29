@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	 body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(192, 192, 192);
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(0, 0, 128);
+             box-shadow: 0px 0px 10px blue;
+            color: white;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgb(192, 192, 192);
+            padding: 20px;
+            border-radius: 5px;
+           box-shadow: 0px 0px 10px rgb(0, 64, 128);
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid rgb(192, 192, 192);
+        }
+        th {
+            background-color: rgb(192, 192, 192);
+            box-shadow: 0px 0px 10px rgb(144, 144, 144);
+            
+        }
+        input[type="submit"] {
+            background-color: rgb(128, 128, 128);
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+</style>
+</head>
+<body>
+	<form method="post" action="AddCustomerServlet">
+		<center>
+			<h1>Add Customer</h1>
+			<table>
+				<tr>
+					<th>Firstname:</th>
+			<td>
+			<input type="text" name="fisrtname"/><br/><br/>
+			</td>
+				</tr>
+				<tr>
+				<th>Lastname:</th>
+			<td>
+			<input type="text" name="lastname"/><br/><br/>
+			</td>
+			</tr>
+			<tr>
+				<th>User Name:</th>
+			<td>
+			<input type="text" name="userName"/><br/><br/>
+			</td>
+			</tr>
+			<tr>
+				<th>Password:</th>
+			<td>
+			<input type="password" name="passWord"/><br/><br/>
+			</td>
+			</tr>
+			
+			<tr>
+				<th>Email:</th>
+			<td>
+			<input type="email" name="email"/><br/><br/>
+			</td>
+			</tr>
+			<tr>
+				<th>PhoneNo:</th>
+			<td>
+			<input type="text" name="PhoneNo"/><br/><br/>
+			</td>
+			</tr>
+			<TR>
+                    <TH colspan="2">
+                        <input type="submit" name="submit">
+                    </TH>
+                </TR>
+			
+			</table>
+		</center>
+		<br>
+		<a href="Login.html">Login</a>
+	</form>
+	
+</body>
+</html>

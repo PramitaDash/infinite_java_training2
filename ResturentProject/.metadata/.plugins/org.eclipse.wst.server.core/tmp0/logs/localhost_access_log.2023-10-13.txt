@@ -1,0 +1,13 @@
+127.0.0.1 - - [13/Oct/2023:14:51:20 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:14:51:21 +0530] "GET /Restaurant/DashBord.jsf HTTP/1.1" 200 2891
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:14:51:21 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+127.0.0.1 - - [13/Oct/2023:14:55:30 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:14:55:31 +0530] "GET /Restaurant/AddCustomer.jsf HTTP/1.1" 200 3884
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:14:57:15 +0530] "POST /Restaurant/AddCustomer.jsf HTTP/1.1" 200 4000
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:15:00:26 +0530] "GET /Restaurant/DashBord.jsf HTTP/1.1" 200 2847
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:15:00:29 +0530] "POST /Restaurant/DashBord.jsf HTTP/1.1" 200 5278
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:15:00:32 +0530] "POST /Restaurant/RestaurantShow.jsf HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:15:00:32 +0530] "GET /Restaurant/Menu.jsf HTTP/1.1" 200 3850
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:15:00:35 +0530] "GET /Restaurant/DashBord.jsf HTTP/1.1" 200 2847
+0:0:0:0:0:0:0:1 - - [13/Oct/2023:15:00:37 +0530] "POST /Restaurant/DashBord.jsf HTTP/1.1" 200 3781
+127.0.0.1 - - [13/Oct/2023:16:35:42 +0530] "GET / HTTP/1.1" 404 1074

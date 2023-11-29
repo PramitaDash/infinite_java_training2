@@ -1,0 +1,6 @@
+127.0.0.1 - - [24/Sep/2023:23:49:43 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:49:44 +0530] "GET /library/SearchPrint.jsp HTTP/1.1" 500 2699
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:50:09 +0530] "GET /library/Login.jsp HTTP/1.1" 200 416
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:50:18 +0530] "POST /library/Login.jsp HTTP/1.1" 200 1298
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:50:20 +0530] "GET /library/Search.jsp HTTP/1.1" 200 2023
+0:0:0:0:0:0:0:1 - - [24/Sep/2023:23:50:25 +0530] "GET /library/SearchPrint.jsp?searchtype=all&searchvalue= HTTP/1.1" 200 4519

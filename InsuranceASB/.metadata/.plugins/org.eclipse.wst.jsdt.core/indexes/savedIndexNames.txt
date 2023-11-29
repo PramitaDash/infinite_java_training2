@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\InsuranceASB\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+118111721.index
+1188083512.index
+970111612.index
+2534635430.index
+3333552023.index
+1284273768.index

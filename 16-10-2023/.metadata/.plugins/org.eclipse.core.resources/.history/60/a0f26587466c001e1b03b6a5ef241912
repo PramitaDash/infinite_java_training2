@@ -1,0 +1,13 @@
+package com.java.string;
+
+public class BooleanToStringExample {
+	
+	public static void main(String[] args) {
+        boolean boolValue = true;
+        String stringValue = Boolean.toString(boolValue);
+
+        System.out.println("Boolean Value: " + boolValue);
+        System.out.println("String Value: " + stringValue);
+    }
+
+}

@@ -1,0 +1,13 @@
+package com.java.string;
+
+public class FloatToStringExample {
+	
+	public static void main(String[] args) {
+        float floatValue = 123.45f;
+        String stringValue = Float.toString(floatValue);
+
+        System.out.println("Float Value: " + floatValue);
+        System.out.println("String Value: " + stringValue);
+    }
+
+}

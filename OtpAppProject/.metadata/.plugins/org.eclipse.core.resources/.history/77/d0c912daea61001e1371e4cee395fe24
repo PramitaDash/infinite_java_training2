@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(199, 199, 199);
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(0, 0, 128);
+             box-shadow: 0px 0px 10px rgb(102, 102, 255);
+            color: white;
+        }
+         form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgb(193, 193, 193);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgb(0, 64, 128);
+        }
+ </style>
+</head>
+<body>
+<form action="LoginServlet" method="post">
+        <center>
+            <h1>Login Account</h1>
+            <table border="3px">
+                <tr>
+                    <th>Username : </th>
+                    <td>
+                        <input type="text" name="user">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Password : </th>
+                    <td>
+                        <input type="password" name="pass">
+                    </td>
+                </tr>
+                <TR>
+                    <TH colspan="2">
+                        <input type="submit" name="submit">
+                    </TH>
+                </TR>
+            </table>
+        </center>
+    </form>
+
+
+</body>
+</html>

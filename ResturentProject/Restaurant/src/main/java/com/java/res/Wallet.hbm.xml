@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 10, 2023, 2:57:56 PM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.res.Wallet" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="WALLET">
+        <id name="CUS_ID" type="int">
+            <column name="CUS_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="WAL_ID" optimistic-lock="true" type="int" unique="false">
+            <column name="WAL_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="WAL_AMOUNT" optimistic-lock="true" type="double" unique="false">
+            <column name="WAL_AMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="wal_source" optimistic-lock="true" unique="false">
+            <column name="WAL_SOURCE"/>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.java.res.WAL_SOURCE</param>
+                <param name="type">12</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,37 @@
+package com.java.res;
+
+public class Wallet {
+	
+	 private int CUS_ID; 
+	 private int WAL_ID;
+	 private double WAL_AMOUNT;
+	 private WAL_SOURCE wal_source;
+	public int getCUS_ID() {
+		return CUS_ID;
+	}
+	public void setCUS_ID(int cUS_ID) {
+		CUS_ID = cUS_ID;
+	}
+	public int getWAL_ID() {
+		return WAL_ID;
+	}
+	public void setWAL_ID(int wAL_ID) {
+		WAL_ID = wAL_ID;
+	}
+	public double getWAL_AMOUNT() {
+		return WAL_AMOUNT;
+	}
+	public void setWAL_AMOUNT(double wAL_AMOUNT) {
+		WAL_AMOUNT = wAL_AMOUNT;
+	}
+	public WAL_SOURCE getWal_source() {
+		return wal_source;
+	}
+	public void setWal_source(WAL_SOURCE wal_source) {
+		this.wal_source = wal_source;
+	}
+	 
+	 
+	  
+	 
+}

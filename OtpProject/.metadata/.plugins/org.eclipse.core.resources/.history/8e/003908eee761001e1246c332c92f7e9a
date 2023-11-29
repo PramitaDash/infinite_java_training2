@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(199, 199, 199);
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(0, 0, 128);
+             box-shadow: 0px 0px 10px rgb(102, 102, 255);
+            color: white;
+        }
+         form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgb(193, 193, 193);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px blue;
+        }
+</style>
+</head>
+
+<body>
+	<form method="get" action="ValidateOtpServlet">
+		<center>
+			<h1>Otp</h1>
+			User Name : 
+			<input type="text" name="userName" /> <br/><br/>
+			Otp Code : 
+			<input type="number" name="otpCode" /> <Br/><br/>
+			<input type="submit" value="Validate Otp" />
+		</center>
+	</form>
+
+</body>
+</html>

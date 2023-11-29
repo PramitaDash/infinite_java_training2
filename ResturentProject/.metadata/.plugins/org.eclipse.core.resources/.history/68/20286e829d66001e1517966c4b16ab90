@@ -1,0 +1,54 @@
+package com.java.res;
+
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+
+public class CustomerDAOImpl {
+	
+	SessionFactory sf;
+	Session session;
+	
+	
+	
+	public String addCustomerDao(Customer customer) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		session.save(customer);
+		trans.commit();
+		return "UpdateCustomer.xhtml?faces-redirect=true";
+	}
+
+	
+	public String validateMe(Customer customer) {
+		String encr = EncryptPassword.getCode(customer.getCUS_PASSWORD());
+		Map<String,Object> sessionMap = 
+	FacesContext.getCurrentInstance().getExternalContext().getSessionMap();		
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		Criteria cr = session.createCriteria(Customer.class);
+		cr.add(Restrictions.eq("CUS_USERNAME", customer.getCUS_USERNAME()));
+		cr.add(Restrictions.eq("CUS_PASSWORD",encr.trim()));
+		cr.setProjection(Projections.rowCount());
+		
+		long  count =(Long)cr.uniqueResult();
+//		System.out.println(count);
+		if (count==1) {
+			
+			return "RestaurantShow.jsp?faces-redirect=true";			
+		} else {
+			sessionMap.put("errorMessage", "Invalid Credentials...");
+			return "Login.jsp?faces-redirect=true";
+		}
+	}
+
+	
+}

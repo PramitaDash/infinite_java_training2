@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+D:\DeginePattern\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2384413138.index
+2795154541.index
+183623917.index
+3886919285.index
+3092939222.index

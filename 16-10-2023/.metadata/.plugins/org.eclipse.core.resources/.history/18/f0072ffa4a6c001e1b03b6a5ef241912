@@ -1,0 +1,14 @@
+package com.java.string;
+
+public class ShortToStringExample {
+	
+	public static void main(String[] args) {
+        // Convert Short to String using toString()
+        Short shortValue = 1234;
+        String stringValue = Short.toString(shortValue);
+
+        System.out.println("Short Value: " + shortValue);
+        System.out.println("String Value: " + stringValue);
+    }
+
+}

@@ -1,0 +1,11 @@
+127.0.0.1 - - [16/Oct/2023:13:04:08 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:04:11 +0530] "GET /ResturantManagement/AddCustomer.jsf HTTP/1.1" 200 3847
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:04:26 +0530] "POST /ResturantManagement/AddCustomer.jsf;jsessionid=FA55B2C0B2315D7C5D02DF333742C365 HTTP/1.1" 200 3923
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:04:46 +0530] "POST /ResturantManagement/AddCustomer.jsf HTTP/1.1" 200 3925
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:04:55 +0530] "POST /ResturantManagement/AddCustomer.jsf HTTP/1.1" 200 3931
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:05:01 +0530] "POST /ResturantManagement/AddCustomer.jsf HTTP/1.1" 200 3932
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:05:03 +0530] "POST /ResturantManagement/AddCustomer.jsf HTTP/1.1" 200 3932
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:05:03 +0530] "POST /ResturantManagement/AddCustomer.jsf HTTP/1.1" 200 3932
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:05:13 +0530] "POST /ResturantManagement/AddCustomer.jsf HTTP/1.1" 200 3932
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:05:20 +0530] "POST /ResturantManagement/AddCustomer.jsf HTTP/1.1" 200 3936
+0:0:0:0:0:0:0:1 - - [16/Oct/2023:13:05:52 +0530] "POST /ResturantManagement/AddCustomer.jsf HTTP/1.1" 200 3930

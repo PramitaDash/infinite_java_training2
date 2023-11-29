@@ -1,0 +1,7 @@
+package com.java.com;
+
+public enum Status {
+	
+	PENDING
+
+}

@@ -1,0 +1,11 @@
+package com.java.com;
+
+import java.util.List;
+
+public interface ComplaintDAO {
+	
+	List<Complaint> showComplaintDao();
+	Complaint searchComplaintDao(int ComplaintID);
+	String addComplaintDao(Complaint complaint);
+
+}

@@ -1,0 +1,15 @@
+package com.java.ex;
+
+public class ArithmeticExp {
+	
+	public static void main(String[] args) {
+		int arr[] = new int [] {2,3,5}; // arr=[2,3,5]
+		try {
+			int a = arr[2]/0;
+		} catch (ArithmeticException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Cannnot be Divisible...");
+		}
+	}
+
+}

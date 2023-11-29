@@ -1,0 +1,16 @@
+package com.java.string;
+
+public class FloatToStringExample {
+	
+	public static void main(String[] args) {
+//This line declares a variable `floatValue` of type `float` and assigns it the value 123.45f.
+        float floatValue = 123.45f;
+//In this line, you declare a variable `stringValue` of type `String`
+        String stringValue = Float.toString(floatValue);
+//This line prints the text "Float Value: " followed by the value of `floatValue`, which is 123.45, to the console. The output will be "Float Value: 123.45" on the console.
+
+        System.out.println("Float Value: " + floatValue);
+        System.out.println("String Value: " + stringValue);
+    }
+
+}

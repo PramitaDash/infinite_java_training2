@@ -1,0 +1,35 @@
+package com.java.exam;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.junit.Test;
+
+public class VendorTest {
+	
+	@Test
+	public void testVendor() throws ParseException {
+		Vendor vendor = new Vendor();
+		assertNotNull(vendor);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String Date;
+		Date date = new Date();
+		Vendor emp = new Vendor(1001, "Pramita", "Delhi", "pramita@gmail.com", 98675498, "Pending", sdf.parse("2023-09-22"), 5, "Good");
+		
+		assertEquals(1001,emp.getVendorId());
+		assertEquals("Pramita",emp.getVendorName());
+		assertEquals("Delhi",emp.getVendorCity());
+		assertEquals("pramita@gmail.com",emp.getVendorEmail());
+		assertEquals(98675498,emp.getVendorMobile());
+		assertEquals("Pending",emp.getVendorStatus());
+		assertEquals(sdf.parse("2023-09-22"),emp.getVendorStartedDate());
+		assertEquals(5,emp.getVendorRating(),0);
+		assertEquals("Good",emp.getVendorReview());
+	}
+	
+
+}
